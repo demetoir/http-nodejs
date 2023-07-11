@@ -3,8 +3,9 @@
     "version": "1.0.0",
     "main": "hyper-express.main.js",
     "scripts": {
-        "dev": "node ./fastify.main.js",
-        "start": "node hyper-express.main.js",
+        "dev:fasify": "node ./fastify.main.js",
+        "dev:hyper-express": "node ./fastify.main.js",
+        "start": "node fastify.main.js",
         "stop": "pm2 stop",
         "monitor": "pm2 monit",
         "k6": "k6 run ./script.k6.js"

@@ -2,15 +2,15 @@ import { sleep } from "k6";
 import http from "k6/http";
 
 export const options = {
-    vus: 1000,
+    vus: 500,
     duration: "1m",
 };
 
-const url = "http://localhost:3000";
+const url = "https://http-nodejs-preview-0939.up.railway.app/";
 
 export default function () {
-    const ms = (Math.random() * 30) / 100;
-    sleep(ms);
+    // const ms = (Math.random() * 30) / 500;
+    // sleep(ms);
 
     http.post(url, data, {
         headers: { "Content-Type": "application/json" },
