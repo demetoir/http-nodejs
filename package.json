@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "main": "hyper-express.main.js",
     "scripts": {
+        "dev": "node ./fastify.main.js",
         "start": "node hyper-express.main.js",
         "stop": "pm2 stop",
         "monitor": "pm2 monit",
@@ -10,6 +11,7 @@
     },
     "dependencies": {
         "express": "^4.18.2",
+        "fastify": "^4.19.2",
         "hyper-express": "^6.7.1",
         "pm2": "^5.3.0"
     }
