@@ -1,12 +1,16 @@
 import http from "k6/http";
 
 export const options = {
-    vus: 1000,
-    duration: "60s",
+    // vus: 2000,
+    stages: [
+        { duration: '0.5m', target: 100 }, // simulate ramp-up of traffic from 1 to 3 virtual users over 0.5 minutes.
+        { duration: '0.5m', target: 500}, // stay at 4 virtual users for 0.5 minutes
+        { duration: '0.5m', target: 1000 }, // ramp-down to 0 users
+    ],
 };
 
-// const url = "https://http-nodejs-preview-0939.up.railway.app/";
-const url = "http://localhost:3000";
+const url = "https://http-nodejs-preview-0939.up.railway.app/";
+// const url = "http://localhost:3000";
 
 export default function () {
     // const ms = (Math.random() * 30) / 500;
