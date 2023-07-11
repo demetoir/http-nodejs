@@ -5,7 +5,7 @@ module.exports = {
             // script: './fastify.main.js',
             name: 'hyper-express',
             script: './hyper-express.main.js',
-            instances: 4,
+            instances: 1,
             exec_mode: 'cluster'
         },
     ],

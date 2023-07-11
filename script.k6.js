@@ -1,12 +1,14 @@
 import http from "k6/http";
 
 export const options = {
-    // vus: 2000,
-    stages: [
-        { duration: '0.5m', target: 100 }, // simulate ramp-up of traffic from 1 to 3 virtual users over 0.5 minutes.
-        { duration: '0.5m', target: 500}, // stay at 4 virtual users for 0.5 minutes
-        { duration: '0.5m', target: 1000 }, // ramp-down to 0 users
-    ],
+    vus: 500,
+    duration: "1m",
+    noConnectionReuse: true,
+    // stages: [
+    //     { duration: '10s', target: 100 }, // simulate ramp-up of traffic from 1 to 3 virtual users over 0.5 minutes.
+    //     { duration: '50s', target: 500}, // stay at 4 virtual users for 0.5 minutes
+    //     // { duration: '30s', target: 700 }, // ramp-down to 0 users
+    // ],
 };
 
 const url = "https://http-nodejs-preview-0939.up.railway.app/";
