@@ -1,13 +1,10 @@
 {
     "name": "node-performance",
     "version": "1.0.0",
-    "main": "hyper-express.main.js",
     "scripts": {
         "dev:fasify": "node ./fastify.main.js",
         "dev:hyper-express": "node ./fastify.main.js",
-        "start": "node hyper-express.main.js",
-        "stop": "pm2 stop",
-        "monitor": "pm2 monit",
+        "start": "pm2-runtime start ./fastify.main.js -i 2",
         "k6": "k6 run ./script.k6.js"
     },
     "dependencies": {
