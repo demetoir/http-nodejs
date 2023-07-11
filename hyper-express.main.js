@@ -4,20 +4,30 @@ const webserver = new HyperExpress.Server();
 let count = 0;
 
 webserver.get("/", (request, response) => {
-    count += 1;
-    if (count % 1000 == 0) {
-        console.log(count);
-    }
-
     response.send("Hello World");
+
+    count += 1;
+    if (count % 1000 == 0) {
+        console.log(count);
+    }
 });
+
+webserver.post("/reset", (request, response) => {
+
+    response.json({success: true});
+
+    count = 0
+});
+
 webserver.post("/", (request, response) => {
+
+    response.json({success: true});
+
     count += 1;
     if (count % 1000 == 0) {
         console.log(count);
     }
 
-    response.json({ success: true });
 });
 
 webserver

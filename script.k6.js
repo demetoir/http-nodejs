@@ -2,8 +2,9 @@ import http from "k6/http";
 
 export const options = {
     vus: 500,
-    duration: "1m",
-    noConnectionReuse: true,
+    iterations: 30000,
+    // duration: "1m",
+    // noConnectionReuse: true,
     // stages: [
     //     { duration: '10s', target: 100 }, // simulate ramp-up of traffic from 1 to 3 virtual users over 0.5 minutes.
     //     { duration: '50s', target: 500}, // stay at 4 virtual users for 0.5 minutes
