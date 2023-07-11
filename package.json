@@ -4,7 +4,7 @@
     "scripts": {
         "dev:fasify": "node ./fastify.main.js",
         "dev:hyper-express": "node ./fastify.main.js",
-        "start": "pm2-runtime start ./fastify.main.js -i 2",
+        "start": "pm2-runtime start ./hyper-express.main.js -i 2",
         "k6": "k6 run ./script.k6.js"
     },
     "dependencies": {
