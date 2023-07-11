@@ -13,10 +13,13 @@ webserver.get("/", (request, response) => {
 });
 
 webserver.post("/reset", (request, response) => {
-
     response.json({success: true});
 
     count = 0
+});
+
+webserver.post("/count", (request, response) => {
+    response.json({success: true, count});
 });
 
 webserver.post("/", (request, response) => {
