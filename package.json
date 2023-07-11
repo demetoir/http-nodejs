@@ -2,9 +2,9 @@
     "name": "node-performance",
     "version": "1.0.0",
     "scripts": {
+        "start": "pm2-runtime start ./ecosystem.config.js",
         "dev:fasify": "node ./fastify.main.js",
         "dev:hyper-express": "node ./fastify.main.js",
-        "start": "pm2-runtime start ./ecosystem.config.js",
         "k6": "k6 run ./script.k6.js"
     },
     "dependencies": {
