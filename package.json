@@ -5,7 +5,7 @@
     "scripts": {
         "dev:fasify": "node ./fastify.main.js",
         "dev:hyper-express": "node ./fastify.main.js",
-        "start": "node fastify.main.js",
+        "start": "node hyper-express.main.js",
         "stop": "pm2 stop",
         "monitor": "pm2 monit",
         "k6": "k6 run ./script.k6.js"

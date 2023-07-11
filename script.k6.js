@@ -1,9 +1,8 @@
-import { sleep } from "k6";
 import http from "k6/http";
 
 export const options = {
-    vus: 500,
-    duration: "1m",
+    vus: 2000,
+    duration: "60s",
 };
 
 const url = "https://http-nodejs-preview-0939.up.railway.app/";
@@ -13,7 +12,7 @@ export default function () {
     // sleep(ms);
 
     http.post(url, data, {
-        headers: { "Content-Type": "application/json" },
+        headers: {"Content-Type": "application/json"},
     });
 }
 
