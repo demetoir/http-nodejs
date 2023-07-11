@@ -17,7 +17,9 @@ fastify.post("/", function (request, reply) {
     reply.send({success: "world"});
 });
 
-fastify.listen(process.env.PORT || 8080, "0.0.0.0", function (err, address) {
+let host = "0.0.0.0";
+// host = '127.0.0.1'
+fastify.listen(process.env.PORT || 3000, host, function (err, address) {
     if (err) {
         fastify.log.error(err);
         process.exit(1);

@@ -1,11 +1,12 @@
 import http from "k6/http";
 
 export const options = {
-    vus: 400,
+    vus: 1000,
     duration: "60s",
 };
 
-const url = "https://http-nodejs-preview-0939.up.railway.app/";
+// const url = "https://http-nodejs-preview-0939.up.railway.app/";
+const url = "http://localhost:3000";
 
 export default function () {
     // const ms = (Math.random() * 30) / 500;
