@@ -1,8 +1,8 @@
 import http from "k6/http";
 
 export const options = {
-    vus: 100,
-    iterations: 1000 * 10,
+    vus: 400,
+    iterations: 1000 * 60,
     duration: "1m",
     // noConnectionReuse: true,
     // stages: [
