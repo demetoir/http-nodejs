@@ -1,8 +1,8 @@
 import http from "k6/http";
 
 export const options = {
-    vus: 500,
-    iterations: 1000 * 60,
+    vus: 100,
+    iterations: 1000 * 10,
     duration: "1m",
     // noConnectionReuse: true,
     // stages: [
@@ -12,7 +12,7 @@ export const options = {
     // ],
 };
 
-const url = "https://http-nodejs-preview-0939.up.railway.app/";
+const url = "https://http-nodejs-preview-5932.up.railway.app/";
 // const url = "http://localhost:3000";
 
 export default function () {

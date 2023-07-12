@@ -6,8 +6,6 @@ let count = 0;
 webserver.get("/", (request, response) => {
     console.log('hello')
     response.send("Hello World");
-
-
 });
 
 webserver.post("/reset", (request, response) => {
@@ -24,10 +22,10 @@ webserver.post("/", (request, response) => {
 
     response.json({success: true});
 
-    count += 1;
-    if (count % 1000 == 0) {
-        console.log(count);
-    }
+    // count += 1;
+    // if (count % 1000 == 0) {
+    //     console.log(count);
+    // }
 
 });
 
